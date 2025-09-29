@@ -1,0 +1,70 @@
+Programming:
+
+C Language -> Procedural oriented programming[POP]
+->Functional Programming Language
+
+
+C++ Language-> Object Oriented Programming [OOP]-> 
+-> 
+
+OOP : Java,Php,Python,.net,Dart,Kotlin
+
+
+Hello from tops technologies
+
+predefined concepts:
+
+1) header files:
+stdio -> standard input output
+conio -> console input output
+
+2)main function:
+-> every program will start execution from main method
+
+3)printf
+-> it will print something
+
+4)getch
+-> when you want terminate the program
+
+5)void
+-> it will return null value
+
+===========================================
+-> Editor : Turbo C++,Vscode,DevC++,Codeblocker,Online Gdb Compiler
+
+#-> preprocessor
+
+\n -> New line
+
+\t -> Tab
+
+------------------------------------------
+data type:
+
+1)integer -> int -> numeric value -> %d
+2)float -> float -> decimal value[point]-> 4 byte -> %f
+3)character-> char -> single character -> %c
+4)double -> double -> decimal value -> 8 byte -> %lf
+
+variable declare
+
+datatype varname
+int marks;
+
+Operator:
+1)Arithmetic Operator:
++,-,*,/,%
+
+simple intrest 
+I = PRN/100
+
+
+
+
+
+
+
+
+
+
