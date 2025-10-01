@@ -1,0 +1,55 @@
+1)Arithmetic Op: +,-,*,/,%
+2) Relational Op:<,>,<=,>=,==,!=
+
+5<2
+5>2
+18>=18
+
+a=b
+a==b
+
+int a;
+int b=5;
+a=b;
+print(a);
+
+a=5
+b=5
+a!=b->false
+
+3)shorthand Op : +=,-=,*=,/=,%=
+
+a+=b//a=a+b
+b-=c//b=b-c
+
+c=a+b [arithmetic]
+a=a+b [shorthand]
+
+conditional statement:
+1)if
+2)else
+3)else if
+4)nested if
+5)switch-case-break
+
+if(condition)
+{
+
+}
+else
+{
+}
+
+printf
+scanf
+
+
+
+
+
+
+
+
+
+
+
