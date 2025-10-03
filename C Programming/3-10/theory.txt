@@ -1,0 +1,35 @@
+operators:
+Arithmetic Op
+Relational Op
+Shorthand Op : +=,-=,*=,/=,%=
+Assignment Op: =
+
+a = b
+
+
+a+=b // a = a+b
+b-=c // b = b-c
+
+
+
+
+conditional statement:
+1. if
+2. else
+3. else if
+4. nested if
+5. switch case break
+
+
+if(age>18)
+
+else
+
+Logical Op : && ,|| , !
+
+
+
+
+
+
+
