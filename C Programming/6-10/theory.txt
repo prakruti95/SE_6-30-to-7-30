@@ -1,0 +1,38 @@
+loop:
+
+Types of Loop
+1)Entry Control Loop:
+for
+while
+
+2)Exit Control Loop:
+do while
+
+syntax:
+1)for loop:
+for(initialization;condition;incre/decre)
+{
+ //code
+}
+
+2)while loop:
+initialization;
+
+while(condition)
+{
+ code 	
+ incre/decre
+}
+
+3)do while loop:
+initialization;
+
+do
+{
+	code
+	incre/decre
+}
+while(condition);
+
+5*1=5
+
