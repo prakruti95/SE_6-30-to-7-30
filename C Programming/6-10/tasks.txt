@@ -1,0 +1,17 @@
+Task 1:
+userinput-> between 1 to 100
+random number set
+
+luckynum=67
+
+Enter Lucky Number between 1 to 100
+55 -> try with higher number
+99-> try with lower number
+60->try with higher number
+67->congratulations you guessed the number
+Maximum try available for 5 times-> Game Over
+
+Task 2:
+factorial-> 5!=120
+
+
