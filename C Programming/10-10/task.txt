@@ -1,0 +1,3 @@
+1. write down mathematical calculation of biggest digit
+2. W.A.P which take a user input and print the reverse number of given number
+3. W.A.P which take a user input and print the first and last digit sum.
