@@ -1,0 +1,28 @@
+Functions:When you want to reuse the code 
+
+types of functions
+1)inbuilt functions
+ a)string functions
+ b)math functions
+
+2)user-defined functions
+  a)with para with return type
+  b)with para without return type
+  c)without para with return type
+  d)without para without return type
+
+
+
+
+
+
+
+
+-> you have to create function before main method
+
+return_type fun_name(arguments)
+{
+	return
+}
+
+
