@@ -1,0 +1,10 @@
+1.
+function ->[User input]
+
+name,surname,email,password
+email,password->compare
+
+logged in succesfully
+logged in fail
+
+2.factorial -> function
