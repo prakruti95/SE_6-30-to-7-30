@@ -1,0 +1,47 @@
+1.
+#include<stdio.h>
+
+int main() 
+{
+   int number,i,sum=0;
+   float per=0;
+   printf("Enter Size of Subject: ");
+   scanf("%d",&number);
+   
+   int marks[number];
+   
+   for(i=0;i<number;i++)
+   {
+       printf("Enter Your Marks for subject: %d ->  ",i+1);
+       scanf("%d",&marks[i]);
+   }
+   
+    for(int i=0;i<number;i++)
+    {
+        printf("\n Marks of subject is %d",marks[i]);
+    }
+   
+    for(i=0;i<number;i++)
+    {
+       sum+=marks[i];
+    }
+    printf("\n Your Total is : %d ",sum);
+    per = sum/number;
+    printf("\n Your Percentage is : %f ",per);
+
+    return 0;
+}
+
+-> Task : 
+Take a 5 students marks in array using userinput
+-> ascending order
+-> descending order
+
+user input -> 45,67,34,89,56
+-> select 1 for ascending order selecr 2 for descending order
+asc->34,45,56,67,89
+desc->89,67,56,45,34
+
+-> git cmd
+-> github desktop software
+
