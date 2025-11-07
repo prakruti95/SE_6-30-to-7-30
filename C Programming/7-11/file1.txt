@@ -1,0 +1,65 @@
+1.
+#include <stdio.h>
+
+int main() {
+    int num1 = 10, num2 = 20;
+    int temp;
+
+    printf("Before swapping: num1 = %d, num2 = %d\n", num1, num2);
+
+    temp = num1;   // Store the value of num1 in temp
+    num1 = num2;   // Assign the value of num2 to num1
+    num2 = temp;   // Assign the value of temp (original num1) to num2
+
+    printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+
+    return 0;
+}
+
+Task :Swap two numbers without using third variable
+
+2.
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int arr[10], i, j, temp;
+    
+    
+    printf("\n Enter 10 integers: ");
+    for(i = 0; i < 10; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    
+    
+    for(i = 0; i < 9; i++)  
+    {
+        for(j = 0; j < 9 - i; j++)
+        {
+            if(arr[j] < arr[j + 1])  
+            {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;  
+            }
+        }
+    }
+    
+    
+    printf("\nDescending Order: ");
+    for(i = 0; i < 10; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    
+
+    printf("\nAscending Order: ");
+    for(i = 9; i >= 0; i--)  
+    {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
