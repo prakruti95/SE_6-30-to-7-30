@@ -1,0 +1,29 @@
+Constructor:Method having a same as a classname
+
+class Student
+{
+	public:
+	//constructor-no return type
+	Student()
+	{
+	}
+	//method -return type
+	void student()
+	{
+	}
+
+}
+
+
+Types of Constructor
+1)default constructor
+2)parameterized constructor
+3)copy constructor
+
+
+
+
+
+
+
+

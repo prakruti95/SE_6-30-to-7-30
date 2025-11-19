@@ -1,0 +1,15 @@
+class User 
+name
+surname
+technology
+
+display-method
+
+int main()
+{
+	constructor data get
+	//userinput
+
+	display
+
+}
