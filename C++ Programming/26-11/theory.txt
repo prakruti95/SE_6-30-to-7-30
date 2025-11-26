@@ -1,0 +1,7 @@
+Overloading :
+Method having a same name but number of 
+parameters are diffrent
+
+Overriding :
+Method having a same name and number of 
+parameters are also same
