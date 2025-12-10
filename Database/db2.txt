@@ -1,0 +1,66 @@
+DQL : 
+select
+all data
+row wise
+col wise
+order wise
+
+15. select all
+select * from tablenm
+
+16. particular column dispaly
+SELECT columnnm from tablenm
+
+17. particular row display
+select * from tablenm where id='id' 
+
+18.order by
+select colnm from tblnm order by colnm asc/desc
+
+
+
+agreegate functions:
+MAX->SELECT MAX(salary) FROM data
+MIN->SELECT MIN(salary) FROM data
+SUM-> SELECT SUM(salary) FROM data
+AVG->SELECT AVG(salary) FROM data
+COUNT->SELECT COUNT(salary) FROM data 
+FIRST-> SELECT salary FROM data LIMIT 1; 
+LAST->SELECT * from data ORDER by salary DESC LIMIT 1; 
+
+Scalar Functions
+UCASE->SELECT UCASE(name) FROM data
+LCASE->SELECT LCASE(name) FROM data
+MID -> SELECT MID(NAME,1,4) FROM Students; 
+LEN -> SELECT LENGTH(NAME) FROM Stuents; 
+ROUND->SELECT ROUND(MARKS,0) FROM table_name;
+NOW->SELECT NAME, NOW() AS DateTime FROM Students; 
+FORMAT->SELECT NAME, FORMAT(Now(),'YYYY-MM-DD') AS Date FROM
+Students; 
+
+DCL:
+Rollback -> 
+Commit -> 
+
+View -> create view myview as select colname from tablename
+
+Key:
+1)Primary Key
+-> avoid data duplication
+
+2)Unique Key
+-> uniquely identify data
+
+3)Foreign Key
+->refrence pass
+->joins
+->index
+
+
+JOINS:
+
+
+
+
+
+
