@@ -1,0 +1,13 @@
+1.
+SELECT * FROM address JOIN students ON address.id = students.id
+
+2.
+SELECT * FROM address LEFT JOIN students ON address.id = students.id
+
+3.
+SELECT * FROM address RIGHT JOIN students ON address.id = students.id
+
+4.
+SELECT * FROM address LEFT JOIN students ON address.id = students.id
+UNION
+SELECT * FROM address RIGHT JOIN students ON address.id = students.id
