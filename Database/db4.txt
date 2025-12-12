@@ -1,0 +1,43 @@
+View:
+CREATE view appointment_view as SELECT DrName,AppoinmentTime FROM appoinment
+============================================================
+Procedure:
+DELIMITER //
+
+	CREATE PROCEDURE deleteproc(INOUT myid int)
+    
+    BEGIN
+    	DELETE FROM students WHERE id=myid;
+    END //
+
+DELIMITER ;
+
+==========================================================
+Trigger:
+BEFORE INSERT
+AFTER INSERT
+BEFORE UPDATE
+AFTER UPDATE
+BEFORE DELETE
+AFTER DELETE
+
+
+DELIMITER 
+
+$$
+CREATE TRIGGER `before_subscriber_insert` BEFORE INSERT ON 
+`subscribers` FOR EACH ROW 
+
+
+BEGIN
+   
+ INSERT INTO audit_subscribers
+    SET action_performed  = 'Inserted a new subscriber',
+    subscriber_name       =  new.fname;
+
+END
+$$
+
+
+DELIMITER ;
+
