@@ -1,0 +1,162 @@
+1. USE DATABASE database_name;
+
+2. SELECT DISTINCT Dr_Name,Speciality FROM doctors;
+
+3. SELECT column1, column2....columnN FROM
+{AND|OR} CONDITION-2;
+
+4.SELECT column1, column2.
+FROM (val-1, val-2, val-N);
+
+5.
+SELECT column1, column2. column table_name WHERE column_name
+FROM BETWEEN val-1 AND val-2;
+
+SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
+
+6.
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country;
+
+7.
+SELECT SUM(column_name) FROM table_name WHERE CONDITION GROUP BY
+column_name HAVING (arithematicfunction condition)
+
+8.
+CREATE UNIQUE INDEX index_name ON table_name( column1, column2,...columnN);
+
+9.
+DESC table_name;
+
+10.
+COMMIT;
+
+11.
+ROLLBACK;
+-----------------------------------------------------
+-> 
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country;
+
+
+->
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5;
+
+->
+SELECT DISTINCT column1, column2, ... FROM table_name;
+
+->
+GRANT EXECUTE ON FUNCTION Calculatesalary TO '*'@'localhost'; 
+
+->
+REVOKE SELECT ON  Users FROM 'Amit'@'localhost'; 
+
+->
+SELECT * FROM Customers WHERE Country IN ('Germany', 'France', 'UK');
+
+->
+and/or
+->SELECT * FROM Customers WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
+->SELECT * FROM Customers WHERE Country = 'Germany' OR Country = 'Spain';
+
+->
+between-> SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
+
+
+
+Cursor:
+A cursor in SQL is a database object used to retrieve and manipulate 
+data row by row, rather than fetching an entire result set at once.
+
+
+
+cursor->
+1.
+CREATE TABLE tutorials (
+   ID INT PRIMARY KEY,
+   TITLE VARCHAR(100),
+   AUTHOR VARCHAR(40),
+   DATE VARCHAR(40)
+);
+
+2.
+Insert into tutorials values
+(1, 'Java', 'Krishna', '2019-09-01'),
+(2, 'JFreeCharts', 'Satish', '2019-05-01'),
+(3, 'JavaSprings', 'Amit', '2019-05-01'),
+(4, 'Android', 'Ram', '2019-03-01'),
+(5, 'Cassandra', 'Pruthvi', '2019-04-06');
+
+3.
+CREATE TABLE backup (
+   ID INT,
+   TITLE VARCHAR(100),
+   AUTHOR VARCHAR(40),
+   DATE VARCHAR(40)
+);
+
+4.
+DELIMITER //
+CREATE PROCEDURE ExampleProc()
+   BEGIN
+      DECLARE done INT DEFAULT 0;
+      DECLARE tutorialID INTEGER;
+      DECLARE tutorialTitle, tutorialAuthor, 
+	  tutorialDate VARCHAR(20);
+      DECLARE cur CURSOR FOR SELECT * FROM tutorials;
+      DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+      OPEN cur;
+      label: LOOP
+      FETCH cur INTO tutorialID, tutorialTitle, tutorialAuthor, 
+	  tutorialDate;
+      INSERT INTO backup VALUES(tutorialID, tutorialTitle, 
+	  tutorialAuthor, tutorialDate);
+      IF done = 1 THEN LEAVE label;
+      END IF;
+      END LOOP;
+      CLOSE cur;
+   END//
+DELIMITER ;
+
+5.
+CALL ExampleProc;
+
+6.
+select * from backup;
+
+
+
+Trigger:
+BEFORE INSERT
+AFTER INSERT
+BEFORE UPDATE
+AFTER UPDATE
+BEFORE DELETE
+AFTER DELETE
+
+
+DELIMITER 
+
+$$
+CREATE TRIGGER `before_subscriber_insert` BEFORE INSERT ON 
+`subscribers` FOR EACH ROW 
+
+
+BEGIN
+   
+ INSERT INTO audit_subscribers
+    SET action_performed  = 'Inserted a new subscriber',
+    subscriber_name       =  new.fname;
+
+END
+$$
+
+
+DELIMITER ;
+
+
