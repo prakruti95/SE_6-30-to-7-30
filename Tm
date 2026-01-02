@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include <string.h>
+
+void signup() {
+    FILE *fp;
+    char username[50], password[50];
+
+    fp = fopen("users.txt", "a");   // append mode
+    if (fp == NULL) {
+        printf("File error!\n");
+        return;
+    }
+
+    printf("Enter Username: ");
+    scanf("%s", username);
+
+    printf("Enter Password: ");
+    scanf("%s", password);
+
+    fprintf(fp, "%s %s\n", username, password);
+    fclose(fp);
+
+    printf("Signup successful ✅\n");
+}
+
+void signin() {
+    FILE *fp;
+    char username[50], password[50];
+    char fileUser[50], filePass[50];
+    int found = 0;
+
+    fp = fopen("users.txt", "r");   // read mode
+    if (fp == NULL) {
+        printf("No users found. Signup first.\n");
+        return;
+    }
+
+    printf("Enter Username: ");
+    scanf("%s", username);
+
+    printf("Enter Password: ");
+    scanf("%s", password);
+
+    while (fscanf(fp, "%s %s", fileUser, filePass) != EOF) {
+        if (strcmp(username, fileUser) == 0 &&
+            strcmp(password, filePass) == 0) {
+            found = 1;
+            break;
+        }
+    }
+
+    fclose(fp);
+
+    if (found)
+        printf("Signin successful 🎉\n");
+    else
+        printf("Invalid username or password ❌\n");
+}
+
+int main() {
+    int choice;
+
+    do {
+        printf("\n--- MENU ---\n");
+        printf("1. Signup\n");
+        printf("2. Signin\n");
+        printf("3. Exit\n");
+        printf("Enter choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                signup();
+                break;
+            case 2:
+                signin();
+                break;
+            case 3:
+                printf("Thank you!\n");
+                break;
+            default:
+                printf("Invalid choice!\n");
+        }
+    } while (choice != 3);
+
+    return 0;
+}
